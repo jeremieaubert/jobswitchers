@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_08_20_160349) do
+
+ActiveRecord::Schema.define(version: 2019_08_19_161536) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
 
   create_table "answers", force: :cascade do |t|
     t.string "tech_a"
@@ -73,6 +78,7 @@ ActiveRecord::Schema.define(version: 2019_08_20_160349) do
     t.index ["answer_id"], name: "index_tests_on_answer_id"
   end
 
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -85,6 +91,7 @@ ActiveRecord::Schema.define(version: 2019_08_20_160349) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+
   add_foreign_key "answers", "questions"
   add_foreign_key "answers", "users"
   add_foreign_key "jobs", "tests"
@@ -93,4 +100,5 @@ ActiveRecord::Schema.define(version: 2019_08_20_160349) do
   add_foreign_key "test_to_jobs", "jobs"
   add_foreign_key "test_to_jobs", "tests"
   add_foreign_key "tests", "answers"
+
 end
