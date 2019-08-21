@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JobSwitechers</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>JobSwitchers</title>
   </head>
   <body>
     <div class = "card">
-    <h2><strong>JobSwitchers</strong></h2>
-    <h3><strong>About us</strong></h3>
-    <h3><strong>Tarifs</strong></h3>
-    <h3><strong>Account</strong></h3>
-    <%= image_tag "undraw_analysis_4jis.png", width: 374, height: 306  %>
-    <h1><strong>Find Your Vocation New concept, New approach</strong></h1>
-    <p><strong>Analysed Advice</strong></p>
-    <p>The best platform to get a crystal clear advice about your vocation.</p>
-    <p>Check your personality, choose your domain and we give you the oppourtunities to have a hands on experience on the different jobs before u really start to wo</p>
-    <button class="favorite styled"
-        type="button">
-    Check your personality
-    </button>
-    <%= image_tag "undraw_career_progress_ivdb.png", width: 708, height: 470  %>
-    <p><strong>I choose my path</strong></p>
+      <div container>
+        <div class="pic1">
+          <%= image_tag "pic1.png", width: 374, height: 306  %>
+          <p><strong>Analysed Advice</strong></p>
+        </div>
+        <h1><strong>Find Your Vocation New concept, New approach</strong></h1>
+        <p>The best platform to get a crystal clear advice about your vocation.</p>
+        <p>Check your personality, choose your domain and we give you the oppourtunities to have a hands on experience on the different jobs before u really start to work.</p>
+        <div class="row">
+          <button type="button" class="btn btn-dark btn-lg">Check your personality</button>
+        </div>
+        <%= image_tag "pic2.png", width: 708, height: 470  %>
+      <p1><strong>I choose my path</strong></p1>
     </div>
-    <div class="card">
-    <h3><strong>Personality Test</strong></h3>
-    <p>Do the personality test & find your personality to have the exact job match</p>
-    <%= image_tag "undraw_working_late_pukg.png", width: 579, height: 390  %>
-    <%= image_tag "undraw_percentages_0rur.png", width: 665, height: 464  %>
-    <h3><strong>Analysed Advice</strong></h3>
-    <p>We advice you about the different oppurtunities after a deep analysis on your test results</p>
-    <h3><strong>Work with professional</strong></h3>
-    <p>Work with the best professionals in the industry to get a hands on experience in the chosen field</p>
-    <%= image_tag "undraw_co-workers_ujs6.png", width: 656, height: 503  %>
-    <button class="favorite styled"
-        type="button">
-    Check your personality
-    </button>
-    <p><strong>Ready to explore the opportunities?</strong></p>
   </div>
-  </body>
+</div>
+<div class="card2">
+  <h3><strong>Personality Test</strong></h3>
+  <p>Do the personality test & find your personality to have the exact job match</p>
+  <%= image_tag "pic5.png", width: 579, height: 390  %>
+  <%= image_tag "pic4.png", width: 665, height: 464  %>
+  <h3><strong>Analysed Advice</strong></h3>
+  <p>We advice you about the different oppurtunities after a deep analysis on your test results</p>
+  <h3><strong>Work with professional</strong></h3>
+  <p>Work with the best professionals in the industry to get a hands on experience in the chosen field</p>
+  <%= image_tag "pic3.png", width: 656, height: 503  %>
+  <button type="button" class="btn btn-dark btn-lg">Check your personality</button>
+  <p><strong>Ready to explore the opportunities?</strong></p>
+</div>
+<footer>
+  <h3>Contact us</h3>
+  <h3>About us</h3>
+  <h3>Follow us</h3>
+  <i class="fab fa-facebook-square"></i>
+  <i class="fab fa-instagram"></i>
+  <i class="fab fa-twitter-square"></i>
+</footer>
+</body>
 </html>

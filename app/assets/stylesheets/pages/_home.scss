@@ -1,1 +1,39 @@
 // Specific CSS for your home-page
+h3 {
+  font-family: "Optima";
+}
+
+h1{
+  font-family: "Optima";
+  right: 50px;
+}
+
+p1{
+  font-family: "Optima";
+  text-align: center;
+}
+
+.card{
+  background: #FFC107;
+}
+
+.card2{
+  background: #FFFFFF;
+}
+
+.btn-black{
+  color: #3F3D56;
+  box-shadow: 5px 5px 5px black;
+  position: absolute;
+}
+
+
+footer{
+display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: auto;
+  height: 75px;
+  background: black;
+  color: #FFC107;
+}
