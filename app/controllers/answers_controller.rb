@@ -5,7 +5,7 @@ class AnswersController < ApplicationController
   end
 
 private
-def params_answer
-  params.require(:answer).permit(:craft_a)
-end
+  def params_answer
+    params.require(:answer).permit(:craft_a)
+  end
 end
