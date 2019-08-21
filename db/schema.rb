@@ -10,25 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_08_20_160349) do
-
-ActiveRecord::Schema.define(version: 2019_08_19_161536) do
-
+ActiveRecord::Schema.define(version: 2019_08_21_163836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
 
   create_table "answers", force: :cascade do |t|
     t.string "tech_a"
     t.string "social_a"
     t.string "craft_a"
+    t.bigint "test_id"
     t.bigint "user_id"
     t.bigint "question_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["test_id"], name: "index_answers_on_test_id"
     t.index ["user_id"], name: "index_answers_on_user_id"
   end
 
@@ -71,13 +68,12 @@ ActiveRecord::Schema.define(version: 2019_08_19_161536) do
   end
 
   create_table "tests", force: :cascade do |t|
-    t.bigint "answer_id"
     t.string "current_field"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "answer_id"
     t.index ["answer_id"], name: "index_tests_on_answer_id"
   end
-
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -91,8 +87,8 @@ ActiveRecord::Schema.define(version: 2019_08_19_161536) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-
   add_foreign_key "answers", "questions"
+  add_foreign_key "answers", "tests"
   add_foreign_key "answers", "users"
   add_foreign_key "jobs", "tests"
   add_foreign_key "payments", "programs"
@@ -100,5 +96,4 @@ ActiveRecord::Schema.define(version: 2019_08_19_161536) do
   add_foreign_key "test_to_jobs", "jobs"
   add_foreign_key "test_to_jobs", "tests"
   add_foreign_key "tests", "answers"
-
 end
