@@ -1,0 +1,16 @@
+<%= form_tag tests_path do %>
+<%= hidden_field_tag 'answer_id', @answer.id %>
+
+<% @questions.each do |q| %>
+    <p><%= q.q_test %> </p>
+  <input type="checkbox" name="mailing_list"
+  value="yes"> Agree
+  <input type="checkbox" name="mailing_list"
+  value="yes"> Do not agree
+<% end %>
+  <%= submit_tag 'Submit', class: 'btn btn-primary' %>
+<% end %>
+
+
+
+
