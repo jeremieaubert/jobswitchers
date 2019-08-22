@@ -2,7 +2,7 @@ class TestsController < ApplicationController
   def new
     @questions = Question.all
     @answer = Answer.new
-    @test = Test.find(1)
+    @test = Test.new
   end
 
   def create
@@ -10,6 +10,7 @@ class TestsController < ApplicationController
     tech_a = 0
     social_a = 0
     craft_a = 0
+
     @questions = Question.all
     @questions.each do |q|
       response = params["group#{q.id}".to_sym]
@@ -24,6 +25,7 @@ class TestsController < ApplicationController
       end
     end
 
+
     value = {type: :tech, val: tech_a}
     if social_a > value[:val]
       value = {type: :social, val: social_a}
@@ -34,4 +36,3 @@ class TestsController < ApplicationController
 
   end
 
-end

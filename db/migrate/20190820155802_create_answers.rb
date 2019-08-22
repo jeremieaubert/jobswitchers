@@ -4,7 +4,6 @@ class CreateAnswers < ActiveRecord::Migration[5.2]
       t.string :tech_a
       t.string :social_a
       t.string :craft_a
-      t.references :test, foreign_key: true
       t.references :user, foreign_key: true
       t.references :question, foreign_key: true
 
