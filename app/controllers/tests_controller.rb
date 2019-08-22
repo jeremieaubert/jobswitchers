@@ -6,6 +6,7 @@ class TestsController < ApplicationController
   end
 
   def create
+
     tech_a = 0
     social_a = 0
     craft_a = 0
@@ -33,4 +34,5 @@ class TestsController < ApplicationController
       value = {type: :craft, val: craft_a}
     end
   end
-end
+    end
+
