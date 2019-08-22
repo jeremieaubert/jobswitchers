@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_22_094754) do
+ActiveRecord::Schema.define(version: 2019_08_22_132501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_08_22_094754) do
     t.bigint "question_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "response"
     t.index ["question_id"], name: "index_answers_on_question_id"
     t.index ["user_id"], name: "index_answers_on_user_id"
   end
@@ -69,8 +70,6 @@ ActiveRecord::Schema.define(version: 2019_08_22_094754) do
     t.string "current_field"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "answer_id"
-    t.index ["answer_id"], name: "index_tests_on_answer_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -92,5 +91,4 @@ ActiveRecord::Schema.define(version: 2019_08_22_094754) do
   add_foreign_key "programs", "jobs"
   add_foreign_key "test_to_jobs", "jobs"
   add_foreign_key "test_to_jobs", "tests"
-  add_foreign_key "tests", "answers"
 end
