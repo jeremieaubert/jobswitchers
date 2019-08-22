@@ -1,5 +1,5 @@
 class Question < ApplicationRecord
-  has_one :answer
+  has_many :answers
 
   def is_tech?
     self.tech_a == "1"
