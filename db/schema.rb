@@ -10,10 +10,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_19_161536) do
+
+ActiveRecord::Schema.define(version: 2019_08_22_132501) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "response"
+    t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["user_id"], name: "index_answers_on_user_id"
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.bigint "test_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["test_id"], name: "index_jobs_on_test_id"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.bigint "program_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["program_id"], name: "index_payments_on_program_id"
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.bigint "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_programs_on_job_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "q_test"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "tech_a"
+    t.string "social_a"
+    t.string "craft_a"
+  end
+
+  create_table "test_to_jobs", force: :cascade do |t|
+    t.bigint "test_id"
+    t.bigint "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_test_to_jobs_on_job_id"
+    t.index ["test_id"], name: "index_test_to_jobs_on_test_id"
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.string "current_field"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,5 +85,13 @@ ActiveRecord::Schema.define(version: 2019_08_19_161536) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
+  add_foreign_key "answers", "questions"
+  add_foreign_key "answers", "users"
+  add_foreign_key "jobs", "tests"
+  add_foreign_key "payments", "programs"
+  add_foreign_key "programs", "jobs"
+  add_foreign_key "test_to_jobs", "jobs"
+  add_foreign_key "test_to_jobs", "tests"
 
 end
