@@ -17,4 +17,63 @@ question_7 = Question.create([q_test: 'I am passionate about nature'], social_a:
 question_8 = Question.create([q_test: 'I enjoy working independently', craft_a: '1'])
 question_9 = Question.create([q_test: 'I am a creative person'], craft_a: '1')
 
+
+
+job_tech = Job.create(
+[{
+  Title: 'Web Developer',
+  Description: 'yyy'
+},
+{
+  Title: 'Data Scientist',
+  Description: 'yXy'
+},
+{
+  Title: 'Digital Analyst',
+  Description: 'yXy'
+},
+{
+  Title: 'Community Manager',
+  Description: 'xyx'
+}])
+
+job_social = Job.create(
+[{
+  Title: 'Assistant Social Worker',
+  Description: 'yyy'
+},
+{
+  Title: 'Special educator',
+  Description: 'yXy'
+},
+{
+  Title: 'Quality, safety & environmental manager',
+  Description: 'yXy'
+},
+{
+  Title: 'Environmental studies officer',
+  Description: 'xyx'
+}])
+
+job_craft = Job.create(
+[{
+  Title: 'Bootmaker',
+  Description: 'yyy'
+},
+{
+  Title: 'Carpenter',
+  Description: 'yXy'
+},
+{
+  Title: 'Jewelry Designer',
+  Description: 'yXy'
+},
+{
+  Title: 'Florist',
+  Description: 'xyx'
+}])
+
+
+
 puts "#{Question.count} questions created"
+puts "#{Job.count} jobs created"

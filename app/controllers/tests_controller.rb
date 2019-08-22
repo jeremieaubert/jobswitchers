@@ -31,7 +31,7 @@ class TestsController < ApplicationController
     if craft_a > value[:val]
       value = {type: :craft, val: craft_a}
     end
+
   end
-    end
 
 end
