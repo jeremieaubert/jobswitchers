@@ -32,6 +32,14 @@
 
 
   <a class="button" href="#">Pay to unlock</a>
+<p>Amount: <%= humanized_money_with_symbol(@program.price) %></p>
+
+<%= form_tag orders_path do %>
+  <%= hidden_field_tag 'program_id', @program.id %>
+  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+
+
+<% end %>
 
   </div>
 </div>
