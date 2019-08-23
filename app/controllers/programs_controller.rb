@@ -1,6 +1,7 @@
 class ProgramsController < ApplicationController
-  def index
-    @jobs = Job.all
+  def programs
   end
+
+
 
 end
