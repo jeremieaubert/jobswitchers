@@ -4,7 +4,8 @@ class AnswersController < ApplicationController
     redirect_to root_path
   end
 
-private
+  private
+
   def params_answer
     params.require(:answer).permit(:craft_a)
   end

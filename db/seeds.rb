@@ -26,7 +26,7 @@ user_1 = User.create(email: 'admin@gmail.com', password: '123456')
 answer = Answer.create(user: user_1, question: question_1)
 
 #3 create a test with his answer
-test_1 = Test.create(answer: answer)
+test_1 = Test.create(current_field: "blabla")
 #4 create a job with his test
 
 job_tech_1 = Job.create(
@@ -80,7 +80,10 @@ job_craft_4 = Job.create(
   description: 'yyy',
   test: test_1)
 
-
+program = Program.create(
+  price: 20,
+  job: job_craft_3
+  )
 
 puts "#{Question.count} questions created"
 puts "#{Job.count} jobs created"
