@@ -5,18 +5,32 @@
   opacity: 0.9;
 }
 
+.banner2 {
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 300px 500px;
+  position: relative;
+}
+.banner3 {
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 100% !important;
+  opacity: 0.9;
+  background-size: 400px 250px;
+}
+
 .form-login {
   background:#f4f4f4;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px 25px 20px;
   margin-top: 60px;
   margin-bottom: 70px;
   border-radius: 20px;
   box-shadow: 5px 5px 20px;
   margin-left: auto;
-  margin-right: auto;
-  width: 55%;
+  margin-right: 250px;
+  width: 50%;
   font-family: 'Optima';
-  height: 75%;
+  height: 73%;
   opacity: 0.9;
 }
   h2 {
@@ -28,8 +42,7 @@
   }
   .btn {
     width: 100%;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    padding-bottom: 15px;
     height: 3em;
     border: .25em solid transparent;
     border-radius: 1em;
