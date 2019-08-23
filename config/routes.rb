@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :tests do
     resources :answers
   end
-
-
+  resources :orders, only: [:create] do
+    resources :payments, only: [:new, :show, :create]
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
