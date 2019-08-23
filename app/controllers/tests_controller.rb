@@ -39,6 +39,8 @@ class TestsController < ApplicationController
     if craft_a > value[:val]
       value = {type: :craft, val: craft_a}
     end
+
     Test.create(best_score: value[:val], domain: value[:type].to_s)
   end
 end
+
