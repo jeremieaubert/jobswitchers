@@ -1,19 +1,24 @@
+@import 'https://fonts.googleapis.com/css?family=Do+Hyeon';
+
 .banner {
   background-color: #D6D6D6;
 }
 .container {
   justify-content: center;
-  border: 1px solid #FF8978;
+
 }
 .cardy {
   margin-top: 20px;
 }
-.cards {
+.cardss {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   color: #FF8978;
   margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 60px;
 }
 .card-cats{
   background-position: center;
@@ -22,6 +27,8 @@
   justify-content: center;
   text-align: center;
   padding-top: 100px;
+  width: 300px;
+  height: 400px;
 }
 
 .cards-cats h3 {
@@ -67,5 +74,12 @@
   padding: 10px;
   padding-bottom: 10px;
   margin-left: 400px;
+  padding-left: 20px;
+  color: white;
+  text-decoration: none;
 
 }
+
+
+
+
