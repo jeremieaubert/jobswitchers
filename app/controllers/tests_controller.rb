@@ -41,11 +41,4 @@ class TestsController < ApplicationController
     end
     test = Test.create(user: current_user, best_score: value[:val], domain: value[:type].to_s)
   end
-  #  redirect_to.....
-    value = { type: :tech, val: tech_a }
-    value = { type: :social, val: social_a } if social_a > value[:val]
-    value = { type: :craft, val: craft_a } if craft_a > value[:val]
-
-    Test.create(best_score: value[:val], domain: value[:type].to_s)
-
 end

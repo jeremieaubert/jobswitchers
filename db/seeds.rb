@@ -80,10 +80,10 @@ job_craft_4 = Job.create(
   description: 'yyy',
   test: test_1)
 
-program = Program.create(
-  price: 20,
-  job: job_craft_3
-  )
+#program = Program.create(
+ # price: 20,
+  #job: job_craft_3
+  #)
 
 puts "#{Question.count} questions created"
 puts "#{Job.count} jobs created"
