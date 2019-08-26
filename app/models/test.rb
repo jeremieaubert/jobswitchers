@@ -1,3 +1,4 @@
 class Test < ApplicationRecord
-  belongs_to :answer
+belongs_to :user
+has_many :answers
 end

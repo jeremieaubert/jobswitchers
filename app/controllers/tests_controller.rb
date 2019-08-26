@@ -18,6 +18,7 @@ class TestsController < ApplicationController
       if response == "1"
         if q.is_tech?
           tech_a += 1
+
           Answer.create(user: current_user, question: q, response: "1")
         elsif q.is_social?
           social_a += 1
@@ -31,6 +32,16 @@ class TestsController < ApplicationController
       end
     end
 
+    value = {type: :tech, val: tech_a}
+    if social_a > value[:val]
+      value = {type: :social, val: social_a}
+    end
+    if craft_a > value[:val]
+      value = {type: :craft, val: craft_a}
+    end
+    test = Test.create(user: current_user, best_score: value[:val], domain: value[:type].to_s)
+  end
+  #  redirect_to.....
     value = { type: :tech, val: tech_a }
     value = { type: :social, val: social_a } if social_a > value[:val]
     value = { type: :craft, val: craft_a } if craft_a > value[:val]
