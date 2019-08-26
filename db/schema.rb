@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_22_094754) do
+ActiveRecord::Schema.define(version: 2019_08_22_155036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,10 +41,13 @@ ActiveRecord::Schema.define(version: 2019_08_22_094754) do
   end
 
   create_table "programs", force: :cascade do |t|
-    t.bigint "job_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["job_id"], name: "index_programs_on_job_id"
+    t.bigint "user_id"
+    t.bigint "test_id"
+    t.integer "job_ids", default: [], array: true
+    t.index ["test_id"], name: "index_programs_on_test_id"
+    t.index ["user_id"], name: "index_programs_on_user_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -70,7 +73,11 @@ ActiveRecord::Schema.define(version: 2019_08_22_094754) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "answer_id"
+    t.bigint "user_id"
+    t.integer "best_score"
+    t.string "Domain"
     t.index ["answer_id"], name: "index_tests_on_answer_id"
+    t.index ["user_id"], name: "index_tests_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -89,8 +96,10 @@ ActiveRecord::Schema.define(version: 2019_08_22_094754) do
   add_foreign_key "answers", "users"
   add_foreign_key "jobs", "tests"
   add_foreign_key "payments", "programs"
-  add_foreign_key "programs", "jobs"
+  add_foreign_key "programs", "tests"
+  add_foreign_key "programs", "users"
   add_foreign_key "test_to_jobs", "jobs"
   add_foreign_key "test_to_jobs", "tests"
   add_foreign_key "tests", "answers"
+  add_foreign_key "tests", "users"
 end
