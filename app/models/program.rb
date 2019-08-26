@@ -1,4 +1,8 @@
 class Program < ApplicationRecord
-  belongs_to :job
+
+  has_many :jobs
+  belongs_to :test
+  belongs_to :user
   monetize :price_cents
+
 end
