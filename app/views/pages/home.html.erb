@@ -30,7 +30,9 @@
                 <p>Check your personality, choose your domain and we give you the opportunities to have a hands on experience on the different jobs before you really start to work.</p>
               </div>
               <div class="buttons1">
-                <button type="button" class="btn btn-dark btn-lg">Check your personality</button>
+                <a href="" class="btn"><strong>Check your personality</strong>
+                <%#= link_to new_test_path, class: "btn" %>
+                </a>
               </div>
             </div>
             <div class="col-6">
@@ -50,22 +52,32 @@
         <div class="col-6">
           <div class="description3">
             <h3><strong>Personality Test</strong></h3>
-            <p>Do the personality test & find your personality to have the exact job match</p>
+            <div class="buttons3">
+            <button class="btn1"><strong>Know more</strong></button>
+            </div>
           </div>
         </div>
-        <div class="col-6">
-          <%= image_tag "pic5.png", width: 479, height: 300  %>
+        <div class="col-6 cardo">
+          <%= image_tag "pic5.png", width: 459, height: 270  %>
+            <div class="info">
+            <p><strong>Do the personality test & find your personality to have the exact job match</strong></p>
+           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-6">
-          <%= image_tag "pic4.png", width: 600, height: 400  %>
+        <div class="col-6 cardo">
+          <%= image_tag "pic4.png", width: 459, height: 270  %>
+            <div class="info">
+            <p><strong>We advice you about the different oppurtunities after a deep analysis on your test results</strong></p>
+           </div>
         </div>
         <div class="col-6">
           <div class="description4">
             <h3><strong>Analysed Advice</strong></h3>
-            <p>We advice you about the different oppurtunities after a deep analysis on your test results</p>
+             <div class="buttons3">
+              <button class="btn1"><strong>Know more</strong></button>
+            </div>
           </div>
         </div>
       </div>
@@ -74,37 +86,43 @@
         <div class="col-5">
           <div class="description5">
             <h3><strong>Work with professional</strong></h3>
-            <p>Work with the best professionals in the industry to get a hands on experience in the chosen field</p>
+            <div class="buttons3">
+              <button class="btn2"><strong>Know more</strong></button>
+            </div>
           </div>
         </div>
-        <div class="col-7">
-          <%= image_tag "pic3.png", width: 556, height: 403  %>
+        <div class="col-6 cardo">
+          <%= image_tag "pic3.png", width: 459, height: 270  %>
+            <div class="info">
+            <p><strong>Work with the best professionals in the industry to get a hands on experience in the chosen field</strong></p>
+           </div>
         </div>
-    </div>
 
       <div class="row">
         <div class="col-6">
           <div class="buttons2">
-            <button type="button" class="btn btn-dark btn-lg">Check your personality</button>
+            <a href="" class="btn"><strong>Check your personality</a>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12">
           <div class="description6">
-            <p><strong>Ready to explore the opportunities?</strong></p>
+            <p><strong>To explore the opportunities with us !!</strong></p>
           </div>
         </div>
-     </div>
+      </div>
+
+
    </div>
  </div>
 
       <footer>
-        <h3>Contact us</h3>
-        <h3>About us</h3>
-        <h3>Follow us</h3>
-        <div class="icons">
-          <i class="fab fa-facebook-square"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-twitter-square"></i>
+        <a href=""><h5>Contact us</h5></a>
+        <a href=""><h5>About us</h5></a>
+        <a href=""><h5>Follow us</h5></a>
+        <div class="icon">
+          <a href="" class="fab fa-facebook-square"></a>
+          <a href="" class="fab fa-instagram"></a>
+          <a href="" class="fab fa-twitter-square"></a>
         </div>
       </footer>
     </body>
