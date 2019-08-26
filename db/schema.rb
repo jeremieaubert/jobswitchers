@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_08_22_155036) do
+
+ActiveRecord::Schema.define(version: 2019_08_22_132501) do
+
+
+
+ActiveRecord::Schema.define(version: 2019_08_23_131750) do
+
+
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_08_22_155036) do
     t.bigint "question_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "response"
     t.index ["question_id"], name: "index_answers_on_question_id"
     t.index ["user_id"], name: "index_answers_on_user_id"
   end
@@ -33,6 +44,18 @@ ActiveRecord::Schema.define(version: 2019_08_22_155036) do
     t.index ["test_id"], name: "index_jobs_on_test_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.string "program_sku"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "amount_currency", default: "EUR", null: false
+    t.jsonb "payment"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
   create_table "payments", force: :cascade do |t|
     t.bigint "program_id"
     t.datetime "created_at", null: false
@@ -43,11 +66,16 @@ ActiveRecord::Schema.define(version: 2019_08_22_155036) do
   create_table "programs", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
     t.bigint "user_id"
     t.bigint "test_id"
     t.integer "job_ids", default: [], array: true
     t.index ["test_id"], name: "index_programs_on_test_id"
     t.index ["user_id"], name: "index_programs_on_user_id"
+
+    t.integer "price_cents", default: 0, null: false
+    t.index ["job_id"], name: "index_programs_on_job_id"
+
   end
 
   create_table "questions", force: :cascade do |t|
@@ -72,12 +100,14 @@ ActiveRecord::Schema.define(version: 2019_08_22_155036) do
     t.string "current_field"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
     t.bigint "answer_id"
     t.bigint "user_id"
     t.integer "best_score"
     t.string "Domain"
     t.index ["answer_id"], name: "index_tests_on_answer_id"
     t.index ["user_id"], name: "index_tests_on_user_id"
+
   end
 
   create_table "users", force: :cascade do |t|
@@ -95,11 +125,14 @@ ActiveRecord::Schema.define(version: 2019_08_22_155036) do
   add_foreign_key "answers", "questions"
   add_foreign_key "answers", "users"
   add_foreign_key "jobs", "tests"
+  add_foreign_key "orders", "users"
   add_foreign_key "payments", "programs"
   add_foreign_key "programs", "tests"
   add_foreign_key "programs", "users"
   add_foreign_key "test_to_jobs", "jobs"
   add_foreign_key "test_to_jobs", "tests"
+
   add_foreign_key "tests", "answers"
   add_foreign_key "tests", "users"
+
 end

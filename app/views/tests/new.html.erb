@@ -1,3 +1,4 @@
+
 <div class="banner pb-5 ">
   <h1>Complete the personality test to find your relevant jobs</h1>
   <%= form_tag tests_path do%>
@@ -29,3 +30,22 @@
   </div>
   <% end %>
 </div>
+
+<%= form_tag tests_path do%>
+<%= hidden_field_tag 'answer_id', @answer.id%>
+
+<% @questions.each do |q| %>
+    <p><%= q.q_test %> </p>
+    <input type="radio" id="yes_<%= q.id %>" name="group<%= q.id %>"
+    value="1"> Yes
+    <input type="radio" id="no_<%= q.id %>" name="group<%= q.id %>"
+    value="0"> No
+
+<% end %>
+  <%= submit_tag 'Submit', class: 'btn btn-primary' %>
+<% end %>
+
+
+
+
+

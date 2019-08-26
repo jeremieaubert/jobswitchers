@@ -17,4 +17,73 @@ question_7 = Question.create(q_test: 'I am passionate about nature', social_a: '
 question_8 = Question.create(q_test: 'I enjoy working independently', craft_a: '1')
 question_9 = Question.create(q_test: 'I am a creative person', craft_a: '1')
 
+#1 create user
+
+user_1 = User.create(email: 'admin@gmail.com', password: '123456')
+
+
+#2 create Answer with his question and his user
+answer = Answer.create(user: user_1, question: question_1)
+
+#3 create a test with his answer
+test_1 = Test.create(current_field: "blabla")
+#4 create a job with his test
+
+job_tech_1 = Job.create(
+  title: 'Web Developer',
+  description: 'yyy',
+  test: test_1)
+job_tech_2 = Job.create(
+  title: 'Data scientist',
+  description: 'yyy',
+  test: test_1)
+job_tech_3 = Job.create(
+  title: 'Community Manager',
+  description: 'yyy',
+  test: test_1)
+job_tech_4 = Job.create(
+  title: 'Digital Analyst',
+  description: 'yyy',
+  test: test_1)
+
+job_social_1 = Job.create(
+  title: 'Assistant Social Worker',
+  description: 'yyy',
+  test: test_1)
+job_social_2 = Job.create(
+  title: 'Special Educator',
+  description: 'yyy',
+  test: test_1)
+job_social_3 = Job.create(
+  title: 'Quality, Safety & Event Manager',
+  description: 'yyy',
+  test: test_1)
+job_social_4 = Job.create(
+  title: 'Environmental Studies Officer',
+  description: 'yyy',
+  test: test_1)
+
+job_craft_1 = Job.create(
+  title: 'Bootmaker',
+  description: 'yyy',
+  test: test_1)
+job_craft_2 = Job.create(
+  title: 'Carpenter',
+  description: 'yyy',
+  test: test_1)
+job_craft_3 = Job.create(
+  title: 'Jewelry Designer',
+  description: 'yyy',
+  test: test_1)
+job_craft_4 = Job.create(
+  title: 'Florist',
+  description: 'yyy',
+  test: test_1)
+
+program = Program.create(
+  price: 20,
+  job: job_craft_3
+  )
+
 puts "#{Question.count} questions created"
+puts "#{Job.count} jobs created"
