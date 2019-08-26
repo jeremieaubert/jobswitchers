@@ -1,4 +1,4 @@
-.d-flex{
+.navbar{
 
   background: linear-gradient(150deg,#FFC107 15%,#ffd571 40%,#FFC107 124%);
   flex-grow: 0;
@@ -7,8 +7,21 @@
 
 .p-2 {
   color: #3F3D56;
-  margin: 15px;
   margin-right: 30px;
+  display: flex;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.navbar-nav {
+  color: #3F3D56;
+  padding-left: 860px;
+  display: flex;
+  font-size: 22px;
+  padding-top: 10px;
+  font-family: "Optima";
+  font-weight: bold;
+
 }
 
 

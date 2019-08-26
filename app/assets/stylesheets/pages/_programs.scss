@@ -1,6 +1,31 @@
 @import 'https://fonts.googleapis.com/css?family=Do+Hyeon';
 
+.card-trip {
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin: 5px;
+    width: 69%;
+  }
 
+  .card-trip > img {
+    height: 300px;
+
+    object-fit: cover;
+  }
+
+  .card-trip h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .card-trip p {
+    font-size: 12px;
+    opacity: .7;
+    margin: 0;
+    text-align: center;
+  }
 
 .banner {
   justify-content: center;
@@ -23,15 +48,16 @@
 .card-cats{
   background-size: cover;
   background-position: center;
-  height: 250px;
-  width: 450px;
   justify-content: center;
   text-align: center;
   padding-top: 100px;
-  width: 350px;
+  width: 320px;
   height: 400px;
   float: left;
   position: relative;
+    border-radius: 20px;
+
+    margin-top: 10px
 }
 
 .cards-cats h3 {
@@ -160,6 +186,7 @@ display: block;
 
 
 
+
 .infy h4{
   text-align: center;
   padding-bottom: 10px;
@@ -190,7 +217,7 @@ display: block;
 
 .img-responsive {
   height: 400px;
-  width: 400px;
+  width: 370px;
 
 }
 
