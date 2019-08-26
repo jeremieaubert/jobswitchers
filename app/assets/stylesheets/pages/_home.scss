@@ -10,11 +10,14 @@ h1{
 
 p{
   font-family: "Optima";
+  font-size: 20px;
 }
 
 .card1{
-  background: #FFC107;
+  background: linear-gradient(150deg,#FFC107 15%,#ffd571 40%,#3F3D56 174%);
+  height: 635px;
 }
+
 
 .card-pic-comment1 p{
   color: white;
@@ -22,39 +25,56 @@ p{
   margin-left: 90px;
 }
 
+.card-pic-comment2 {
+  margin-top: -100px;
+}
+
 .card-pic-comment2 p{
-  margin-left:275px;
+  margin-left:210px;
   font-size: 20px;
-  color: white;
+  color: #3F3D56;
+  margin-top: -90px;
 }
 
 .card-description1 h1{
 position: flex;
 text-align: center;
-margin-top: 100px;
-margin-left: 100px;
+margin-top: 80px;
+margin-left: -250px;
+color: #3F3D56;
 }
 
 .card-description1 p{
 text-align: center;
 font-size: 30px;
 color: white;
-margin-left:100px;
+margin-left:-250px;
 }
 
 .card-description2{
 text-align: left;
 text-align: center;
 font-size: 20px;
-margin-top: 100px;
+margin-top: 50px;
 }
 
 .buttons1{
-  color: #3F3D56;
-  box-shadow: 3px 3px 3px black;
+
   position: absolute;
   margin-left: 100px;
   margin-top: 50px;
+
+
+}
+.btn{
+  background: #3F3D56;
+  color: white;
+  margin-left: 40px;
+}
+
+.btn:hover {
+  color: #3F3D56;
+  background: linear-gradient(150deg,#FFC107 15%,#dcdce1 40%,#3f3d56 104%);
 }
 
 .card2{
@@ -63,19 +83,30 @@ margin-top: 100px;
 
 .buttons2{
   position: absolute;
-  margin-left: 100px;
-  color: #3F3D56;
-  box-shadow: 3px 3px 3px black;
+  margin-left: 450px;
+  margin-top: 75px;
+
 }
+
+.description3{
+  margin-top: 60px;
+}
+
 
 .description3 h3{
   margin-top: 150px;
+  margin-left: 130px;
 }
+
 
 .description4{
   text-align: center;
-  margin-left: 100px;
-  margin-top: 200px;
+  margin-left: 40px;
+  margin-top: 150px;
+}
+.description4 h3{
+
+  margin-right: 80px;
 }
 
 .description5{
@@ -86,20 +117,138 @@ margin-top: 100px;
 
 .description6{
   text-align: center;
-  margin-top: 25px;
+  margin-top: 85px;
   font-size: 20px;
-  margin-left: 50px;
+  margin-left: 120px;
+  margin-bottom: 100px;
 }
 
 footer{
-display: flex;
+  display: flex;
   justify-content: space-between;
   max-width: 100%;
-  height: 50px;
-  background: black;
-  color: #FFC107;
+  height: 60px;
+  background: #3F3D56;
+  padding-top: 15px;
+}
+footer a{
+  color: white;
 }
 
-.icons{
-  justify-content: space-between;
+.icon{
+  padding-right: 200px;
 }
+.buttons3{
+
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 50px;
+
+}
+.btn1{
+  background: #3F3D56;
+  color: white;
+  margin-left: 60px;
+  padding: 10px;
+  margin-top: -40px;
+  border-radius: 10px;
+}
+
+.btn1:hover {
+  color: #3F3D56;
+  background: white;
+}
+.btn2{
+  background: #3F3D56;
+  color: white;
+  margin-left: 30px;
+  padding: 10px;
+  margin-top: -40px;
+  border-radius: 10px;
+}
+
+.btn2:hover {
+  color: #3F3D56;
+  background: white;
+}
+.cardo{
+  width: 250px;
+  height: 370px;
+  border-radius: 15px;
+  padding: 1.5rem;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+  box-shadow: 0px 7px 10px rgba(black, 0.5);
+  margin-top: 40px;
+
+  &:hover{
+    transform: translateY(20px);
+    &:before{
+      opacity: 1;
+    }
+    .info{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: rgba(black, 0.6);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+  }
+
+  .info{
+    position: relative;
+    z-index: 3;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
+  }
+    h1{
+      margin: 0px;
+    }
+    p{
+      letter-spacing: 1px;
+      font-size: 20px;
+      margin-top: 8px;
+    }
+    button{
+      padding: 0.6rem;
+      outline: none;
+      border: none;
+      border-radius: 3px;
+      background: white;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.4s ease;
+      &:hover{
+        background: dodgerblue;
+        color: white;
+      }
+    }
+  }
+
+
