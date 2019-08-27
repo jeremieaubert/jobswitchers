@@ -159,15 +159,7 @@
   border-radius: 10px;
 }
 
-.card-cats:hover .text{
-  opacity:0.9;
-  text-align:center;
-  color:white;
-  font-size:25px;
-  font-weight:700;
-  font-family:"Optima";
-  padding:30px;
-}
+
 .infy{
   padding-top: 40px;
 
@@ -176,16 +168,16 @@
 position: relative;
 height: 430px;
 overflow: auto;
-
+}
+.text{
+  color: white;
+  font-size: 22px;
 }
 
 .table-wrapper-scroll-y {
 display: block;
 
 }
-
-
-
 
 .infy h4{
   text-align: center;
@@ -216,7 +208,7 @@ display: block;
 }
 
 .img-responsive {
-  height: 400px;
+  height: 550px;
   width: 370px;
 
 }
