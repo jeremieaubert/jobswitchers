@@ -6,8 +6,19 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     margin: 5px;
     width: 69%;
+    padding-left: 10px;
   }
 
+.card-triper {
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin: 5px;
+    width: 129%;
+    padding: 10px;
+    height: 520px;
+    margin-top: 30px;
+  }
   .card-trip > img {
     height: 300px;
 
@@ -20,12 +31,42 @@
     margin: 0;
   }
 
+  .card-triper h5{
+  font-style: "Optima";
+  color: #3F3D56;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 25px;
+  font-size: 25px;
+  }
+
   .card-trip p {
     font-size: 12px;
     opacity: .7;
     margin: 0;
     text-align: center;
   }
+
+  .card-triper p {
+    font-size: 20px;
+    padding-top: 20px;
+    margin: 10px;
+
+  }
+.card-imag1{
+  margin-right: -320px;
+
+  opacity: 0.8;
+  margin-top: -60px;
+  margin-right: -40px;
+
+}
+
+.card-imag4{
+
+  margin-top: 10px;
+  opacity: 0.8;
+}
 
 .banner {
   justify-content: center;
@@ -65,12 +106,15 @@
   font-size: 16px;
 }
 .dev h1{
-  margin-left: 400px;
-  margin-top: 20px;
+  text-align: center;
   color: #3F3D56;
-
+  margin-top: 20px;
 }
 
+.dev p{
+  text-align: center;
+  color: #3F3D56;
+}
 .dev1{
   box-shadow: 0 0 8px #FF8978;
   border-width: 20px;
@@ -176,6 +220,7 @@
 position: relative;
 height: 430px;
 overflow: auto;
+margin-bottom: 100px;
 
 }
 
@@ -183,8 +228,6 @@ overflow: auto;
 display: block;
 
 }
-
-
 
 
 .infy h4{
@@ -229,6 +272,7 @@ display: block;
     overflow: hidden;
     background-color:white;
     width: 1590px;
+
 
 
   .cards {
