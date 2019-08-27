@@ -17,15 +17,15 @@ class TestsController < ApplicationController
 
       if response == "1"
         if q.is_tech?
-          tech_a += 1
+          tech_a += 10
 
           Answer.create(user: current_user, question: q, response: "1")
         elsif q.is_social?
-          social_a += 1
+          social_a += 10
 
           Answer.create(user: current_user, question: q, response: "1")
         elsif q.is_craft?
-          craft_a += 1
+          craft_a += 10
 
           Answer.create(user: current_user, question: q, response: "1")
         end
@@ -39,6 +39,7 @@ class TestsController < ApplicationController
     if craft_a > value[:val]
       value = {type: :craft, val: craft_a}
     end
-    test = Test.create(user: current_user, best_score: value[:val], domain: value[:type].to_s)
+    @test = Test.create(user: current_user, best_score: value[:val], domain: value[:type].to_s)
+    redirect_to programs_path(@test)
   end
 end
