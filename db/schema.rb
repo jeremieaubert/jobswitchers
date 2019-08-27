@@ -56,10 +56,10 @@ ActiveRecord::Schema.define(version: 2019_08_23_131750) do
   create_table "programs", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price_cents", default: 0, null: false
     t.bigint "user_id"
     t.bigint "test_id"
     t.integer "job_ids", default: [], array: true
-    t.integer "price_cents", default: 0, null: false
     t.index ["test_id"], name: "index_programs_on_test_id"
     t.index ["user_id"], name: "index_programs_on_user_id"
   end

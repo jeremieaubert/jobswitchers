@@ -145,9 +145,11 @@
       </div>
     </div>
   </div>
-  <div class="buttons6">
-    <a href="" class="btn6"><strong>Pay to unlock the jobs</strong></a>
-  </div>
+      <%= form_tag orders_path do %>
+      <%= hidden_field_tag 'program_id', @program.id %>
+      <%= submit_tag 'Pay to unlock the jobs', class: 'btn btn-primary' %>
+      <% end %>
+
 </div>
 </div>
 </div>
@@ -167,11 +169,6 @@
 
 
 
-      <%#= form_tag orders_path do %>
-      <%#= hidden_field_tag 'program_id', @program.id %>
-      <%#= submit_tag 'Purchase', class: 'btn btn-primary' %>
-
-  <%#end %>
 
 
 
