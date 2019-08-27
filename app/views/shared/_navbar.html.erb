@@ -1,6 +1,6 @@
 
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <%= link_to "#", class: "navbar-brand p-2 flex-grow-1 bd-highlight" do %>
+    <%= link_to root_path, class: "navbar-brand p-2 flex-grow-1 bd-highlight" do %>
       <%= image_tag "logoGris.png", width: 55, height: 50 %>
       <h1><strong>JobSwitchers</strong></h1>
       <% end %>
@@ -12,7 +12,7 @@
       <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Messages", "#", class: "nav-link" %>
@@ -27,7 +27,7 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Home", "/", class: "nav-link" %>
+            <%= link_to "Home", root_path , class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
