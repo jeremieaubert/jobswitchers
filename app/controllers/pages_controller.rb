@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
   def programs
-    @program = Program.first
+    @test = Test.find(params[:format])
   end
 
   def home
