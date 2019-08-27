@@ -19,7 +19,7 @@ color: #3F3D56;
 
 .navbar-nav {
   color: #3F3D56;
-  padding-left: 860px;
+  padding-left: 60px;
   display: flex;
   font-size: 22px;
   padding-top: 10px;
@@ -28,7 +28,9 @@ color: #3F3D56;
 
 }
 
-
+.navbar-collapse {
+  flex-grow: 0 !important;
+}
 
 
 
