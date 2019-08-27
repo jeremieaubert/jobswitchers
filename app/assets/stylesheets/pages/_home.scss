@@ -2,6 +2,7 @@
 
 h3 {
   font-family: "Optima";
+  color: #3F3D56;
 }
 
 h1{
@@ -12,7 +13,63 @@ p{
   font-family: "Optima";
   font-size: 20px;
 }
+h2{
+  font-family: Montserrat;
+  font-size: 34px;
+  padding-top: 40px;
+  text-align: center;
+}
 
+.middle-cover .vertical-line{
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    width: 2px;
+    height: 80px;
+    background-color: #51a9ab;
+}
+.other-actions .horizontal-line{
+    width: 80px;
+    height: 2px;
+    background-color: white;
+    margin-left: 720px;
+
+}
+.number{
+    position: absolute;
+    top: -30px;
+    line-height: 1;
+    color: #eaebed;
+    opacity: 0.5;
+    font-size: 8em;
+    z-index: 0;
+    font-weight: 700;
+    margin-top: 100px;
+}
+.low .number{
+    position: absolute;
+    top: -30px;
+    line-height: 1;
+    color: white;
+    opacity: 0.3;
+    font-size: 8em;
+    z-index: 0;
+    font-weight: 700;
+    margin-top: 100px;
+    padding-left: 350px;
+}
+.lowo .number{
+  margin-left: -70px;
+  margin-top: 90px;
+  color: grey;
+  opacity: 0.1;
+   }
+
+.containery{
+  background: #f4f5f6;
+  background: -webkit-gradient(linear,left top,left bottom,from(#f4f5f6),to(#fff));
+  background: linear-gradient(180deg,#f4f5f6 0,#fff);
+}
 .card1{
   background: linear-gradient(150deg,#FFC107 15%,#ffd571 40%,#3F3D56 174%);
   height: 635px;
@@ -78,8 +135,12 @@ margin-top: 50px;
 }
 
 .card2{
-  background: #FFFFFF;
-}
+  background: #D8D9DA;
+  background: -webkit-gradient(linear,left top,left bottom,from(#D8D9DA),to(#fff));
+  background: linear-gradient(180deg,#D8D9DA 0,#fff);
+  margin-bottom: 60px;
+
+  }
 
 .buttons2{
   position: absolute;
@@ -92,10 +153,14 @@ margin-top: 50px;
   margin-top: 60px;
 }
 
-
 .description3 h3{
   margin-top: 150px;
-  margin-left: 130px;
+  margin-left: 30px;
+}
+
+.description3 p{
+
+  margin-left: -70px;
 }
 
 
@@ -111,8 +176,19 @@ margin-top: 50px;
 
 .description5{
   text-align: center;
-  margin-left: 50px;
+  margin-left: 20px;
   margin-top: 200px;
+}
+
+.description5 h3{
+  text-align: center;
+  margin-left: -60px;
+  margin-top: -60px;
+}
+.description5 p{
+  text-align: center;
+  margin-left: -80px;
+  margin-top: 20px;
 }
 
 .description6{
@@ -122,6 +198,8 @@ margin-top: 50px;
   margin-left: 120px;
   margin-bottom: 100px;
 }
+
+
 
 footer{
   display: flex;
@@ -141,8 +219,8 @@ footer a{
 .buttons3{
 
   position: absolute;
-  margin-left: 100px;
-  margin-top: 50px;
+  margin-left: 20px;
+  margin-top: 10px;
 
 }
 .btn1{
@@ -250,5 +328,7 @@ footer a{
       }
     }
   }
+
+
 
 

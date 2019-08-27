@@ -1,31 +1,33 @@
 
 <div class="banner pb-5 ">
-  <h1>Complete the personality test to find your relevant jobs</h1>
+  <h3>Complete the test to know your personality & the relevant jobs</h3>
   <%= form_tag tests_path do%>
   <%= hidden_field_tag 'answer_id', @answer.id%>
   <div class="row d-flex justify-content-center">
     <div class="accordion col-6" id="accordionExample">
       <% @questions.each_with_index do |q, i| %>
       <div class="card">
-        <div class="card-header py-1" id="headingOne">
-          <h2 class="mb-0">
-          <button class="btn btn-link <%= 'collapsed' unless i.zero? %>" type="button" data-toggle="collapse" data-target="#collapse<%= i %>" aria-expanded="<%= i.zero? %>" aria-controls="collapse<%= i %>">
-          Question <%= i + 1 %>
-          </button>
+        <div class="card-header d-flex py-1" id="headingOne">
+          <h2 class="font mb-0">
+          <a href="" class="bols <%= 'collapsed' unless i.zero? %>" type="" data-toggle="collapse" data-target="#collapse<%= i %>" aria-expanded="<%= i.zero? %>" aria-controls="collapse<%= i %>">
+           Q <%= i + 1 %>
+          </a>
           </h2>
-        </div>
+
         <div id="collapse<%= i %>" class="collapse <%= 'show' if i.zero? %>" aria-labelledby="headingOne" data-parent="#accordionExample">
           <div class="card-body">
             <p><%= q.q_test %> </p>
             <input type="radio" id="yes_<%= q.id %>" name="group<%= q.id %>"
-            value="1" data-toggle="collapse" data-target="#collapse<%= i+1 %>" aria-controls="collapse<%= i+1 %>"> Yes
+            value="1" data-toggle="collapse" data-target="#collapse<%= i+1 %>" aria-controls="collapse<%= i+1 %>"> ❤️
             <input type="radio" id="no_<%= q.id %>" name="group<%= q.id %>"
-            value="0" data-toggle="collapse" data-target="#collapse<%= i+1 %>" aria-controls="collapse<%= i+1 %>"> No
+            value="1" data-toggle="collapse" data-target="#collapse<%= i+1 %>" aria-controls="collapse<%= i+1 %>">  🙅‍♂️
+
+            </div>
           </div>
         </div>
       </div>
       <% end %>
-    <%= submit_tag 'Submit', class: 'btn btn-primary btn-block mt-3' %>
+    <%= submit_tag 'Submit', class: 'btn11 mt-3' %>
     </div>
   </div>
   <% end %>
