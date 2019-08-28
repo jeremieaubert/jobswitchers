@@ -1,13 +1,12 @@
 .navbar{
   background-color: #FFC107;
-
   flex-grow: 0;
 
 }
 
-.navbar h1{
-color: #3F3D56;
-
+.navbar-brand h1{
+  color: #3F3D56;
+  justify-content: left;
 }
 .p-2 {
   color: #3F3D56;
