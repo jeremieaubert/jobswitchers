@@ -7,11 +7,13 @@ h3 {
 
 h1{
   font-family: "Optima";
+  color: #3F3D56;
 }
 
 p{
   font-family: "Optima";
   font-size: 20px;
+  color: #3F3D56;
 }
 h2{
   font-family: Montserrat;
@@ -71,7 +73,7 @@ h2{
   background: linear-gradient(180deg,#f4f5f6 0,#fff);
 }
 .card1{
-  background: linear-gradient(150deg,#FFC107 15%,#ffd571 40%,#3F3D56 174%);
+  background: linear-gradient(10deg,#FFE7A0 10%,#FFD454 40%,#FFC107 54%);
   height: 635px;
 }
 
@@ -79,7 +81,8 @@ h2{
 .card-pic-comment1 p{
   color: white;
   font-size: 20px;
-  margin-left: 90px;
+  margin-left: 70px;
+  margin-top: -10px;
 }
 
 .card-pic-comment2 {
@@ -90,7 +93,7 @@ h2{
   font-size: 20px;
   color: #3F3D56;
   margin-top: -15%;
-  padding-left: 23%;
+  padding-left: 27%;
 }
 
 .card-description1 h1{
@@ -127,11 +130,13 @@ margin-top: 50px;
   background: #3F3D56;
   color: white;
   margin-left: 40px;
+  font-weight: bold;
 }
 
 .btn:hover {
   color: #3F3D56;
-  background: linear-gradient(150deg,#FFC107 15%,#dcdce1 40%,#3f3d56 104%);
+  background: white;
+  font-weight: bold;
 }
 
 .card2{

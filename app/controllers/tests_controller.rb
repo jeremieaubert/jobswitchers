@@ -40,6 +40,7 @@ class TestsController < ApplicationController
       value = {type: :craft, val: craft_a}
     end
     @test = Test.create(user: current_user, best_score: value[:val], domain: value[:type].to_s)
-    redirect_to programs_path(@test)
+
+    redirect_to programs_path(@test, @program)
   end
 end

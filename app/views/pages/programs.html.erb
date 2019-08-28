@@ -14,6 +14,7 @@
       <%= image_tag "2.svg", width: 230, height: 290  %>
       </div>
 
+      <%= form_tag orders_path do %>
     </div>
     <div class="card-triper">
 
@@ -63,7 +64,7 @@
           <li> Makes boots and shoes, using hand and machine tools: Makes patterns, using form of foot and pattern paper, and outlines patterns on leather</li>
           <li> May design and make women's fashion or custom shoes of materials, such as leather, fabric, and straw and be designated Custom-Shoe Designer And Maker</li>
            <div class="buttons5">
-            <a href="" class="btn5"><strong>Talk to Lucie</strong></a>
+            <%= submit_tag 'Talk to Lucie', class: 'btn btn-primary' %>
           </div>
       </div>
     </div>
@@ -90,7 +91,7 @@
             <li> Ability to assess the quality of woodwork and materials</li>
             <li> Ability to operate tools, machines, and other equipment</li>
              <div class="buttons5">
-              <a href="" class="btn5"><strong>Talk to Maurice</strong></a>
+              <%= submit_tag 'Talk to Maurice', class: 'btn btn-primary' %>
             </div>
         </div>
       </div>
@@ -115,7 +116,7 @@
           <li> Make designs that are attractive enough for the clients</li>
           <li> Meet the expectations of clients by using metal, gems or stones as per their interests</li>
            <div class="buttons5">
-            <a href="" class="btn5"><strong>Talk to Marie</strong></a>
+            <%= submit_tag 'Talk to Marie ', class: 'btn btn-primary' %>
           </div>
       </div>
     </div>
@@ -141,15 +142,15 @@
           <li> Make traditional corsages, bouquets, wreaths, and wedding decorations, as well as other kinds of original designs</li>
           <li> Work with a wide range of foliage and flowers</li>
            <div class="buttons5">
-            <a href="" class="btn5"><strong>Talk to Charlotte</strong></a>
+            <%= submit_tag 'Talk to Charlotte', class: 'btn btn-primary' %>
           </div>
       </div>
     </div>
   </div>
-      <%= form_tag orders_path do %>
       <%= hidden_field_tag 'program_id', @program.id %>
-      <%= submit_tag 'Pay to unlock the jobs', class: 'btn btn-primary' %>
+      <%= submit_tag 'Pay to unlock the jobs', class: 'btn buttons6' %>
       <% end %>
+
 
 </div>
 </div>
