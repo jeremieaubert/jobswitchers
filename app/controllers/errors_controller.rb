@@ -1,6 +1,6 @@
 class ErrorsController < ApplicationController
 
-def not_found
+  def not_found
   end
 
 end
