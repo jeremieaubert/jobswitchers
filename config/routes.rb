@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "/programs", to: 'pages#programs'
   get "/professionals", to: 'pages#professionals'
+  get "/404" => "errors#not_found"
 
 
   resources :tests do
