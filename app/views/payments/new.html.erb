@@ -1,16 +1,26 @@
-<h1>Purchase of the program <%= @order.program_sku %></h1>
-<%= form_tag order_payments_path(@order) do %>
-  <article>
-    <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@order.amount) %></span>
-    </label>
-  </article>
-
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="My Program"
-    data-email="<%= current_user.email %>"
-    data-description="Program <%= @order.program_sku %>"
-    data-amount="<%= @order.amount_cents %>"
-    data-currency="<%= @order.amount.currency %>"></script>
-<% end %>
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <div class="row">
+  <div class="payment-card">
+      <h1>Purchase of the program: Craft <%= @order.program_sku %></h1>
+      <%= form_tag order_payments_path(@order) do %>
+      <article>
+        <label class="amount">
+          <span>Amount: <%= humanized_money_with_symbol(@order.amount) %></span>
+        </label>
+      </article>
+      <div class="stripe-button">
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+      data-name="My Program"
+      data-email="<%= current_user.email %>"
+      data-description="Program <%= @order.program_sku %>"
+      data-amount="<%= @order.amount_cents %>"
+      data-currency="<%= @order.amount.currency %>"></script>
+    </div>
+      <% end %>
+    </div>
+</div>
+</body>
