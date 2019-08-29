@@ -6,7 +6,8 @@
     background: #FFC107;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     margin: 5px;
-    width: 60%;
+    width: 925px;
+    height: 300px;
     padding-left: 10px;
   }
 
@@ -146,8 +147,8 @@
 
 }
 .cards .cards--two{
-  width: 350px;
-  height: 450px;
+  width: 250px !important;
+  height: 350px !important;
 
 }
 
@@ -161,6 +162,8 @@
 }
 .card__collection .cards{
   margin: 40px;
+  width: 200px !important;
+  height: 250px !important;
 }
 
 .buttons5{
@@ -180,15 +183,14 @@
 
 .buttons6{
   background: #3F3D56;
-  position: absolute;
-  margin-left: 440px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  position: relative;
+  left: 660px;
   text-decoration: none;
   border-radius: 10px;
   color:white;
   font-weight: bold;
   font-size: 18px;
+  margin-bottom: 40px;
 }
 .buttons6:hover {
   background: #FF8978;
@@ -274,7 +276,7 @@ display: block;
     font-family: 'Do Hyeon', sans-serif;
     overflow: hidden;
     background-color:white;
-    width: 1590px;
+    width: 1200px;
     margin-left: 70px;
 
 
@@ -719,6 +721,6 @@ display: block;
     }
   }
 
-}
+
 
 
