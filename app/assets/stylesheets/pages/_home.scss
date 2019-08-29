@@ -13,13 +13,46 @@ h1{
 p{
   font-family: "Optima";
   font-size: 20px;
-  color: #3F3D56;
 }
+
+
 h2{
   font-family: Montserrat;
   font-size: 34px;
   padding-top: 40px;
   text-align: center;
+}
+.cardero{
+  justify-content: center;
+}
+.cardero img{
+  width: 66px;
+  height: 66px;
+  margin-top: 20px;
+}
+
+.buttons3 img{
+  width: 106px;
+  height: 46px;
+  margin-top: -140px;
+  margin-left: 60px;
+  filter: contrast(200%);
+}
+.analyse img{
+  width: 46px;
+  height: 30px;
+  margin-top: -160px;
+  margin-left: -240px;
+  filter: contrast(200%);
+}
+
+.explore img{
+  width: 86px;
+  height: 86px;
+  margin-top: -240px;
+  margin-left: -150px;
+  filter: contrast(200%);
+
 }
 
 .middle-cover .vertical-line{
@@ -46,7 +79,8 @@ h2{
     font-size: 8em;
     z-index: 0;
     font-weight: 700;
-    margin-top: 100px;
+    margin-top: 110px;
+    margin-left: -110px;
 }
 .low .number{
     position: absolute;
@@ -58,10 +92,10 @@ h2{
     z-index: 0;
     font-weight: 700;
     margin-top: 100px;
-    padding-left: 350px;
+    padding-left: 500px;
 }
 .lowo .number{
-  margin-left: -70px;
+  margin-left: -170px;
   margin-top: 90px;
   color: grey;
   opacity: 0.1;
@@ -126,18 +160,25 @@ margin-top: 50px;
 
 
 }
-.btn{
+.btn21{
   background: #3F3D56;
   color: white;
   margin-left: 40px;
   font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+
 }
 
-.btn:hover {
+.btn21:hover {
   color: #3F3D56;
   background: white;
   font-weight: bold;
+  border-color: #3F3D56;
+  text-decoration: none;
 }
+
 
 .card2{
   background: #D8D9DA;
@@ -150,7 +191,7 @@ margin-top: 50px;
 .buttons2{
   position: absolute;
   margin-left: 450px;
-  margin-top: 75px;
+  margin-top: 83px;
 
 }
 
@@ -196,37 +237,20 @@ margin-top: 50px;
   margin-top: 20px;
 }
 
-.description6{
-  text-align: center;
-  margin-top: 85px;
-  font-size: 20px;
-  margin-left: 120px;
-  margin-bottom: 100px;
+.description6 p{
+
+  margin-top: 80px;
+  font-size: 24px;
+  margin-left: 210px;
+  margin-bottom: 50px;
+  font-family: "Optima";
 }
 
 
-
-footer{
-  display: flex;
-  justify-content: space-between;
-  max-width: 100%;
-  height: 60px;
-  background: #3F3D56;
-  padding-top: 15px;
-}
-footer a{
-  color: white;
-}
-
-.icon{
-  padding-right: 200px;
-}
 .buttons3{
-
   position: absolute;
   margin-left: 20px;
-  margin-top: 10px;
-
+  margin-top: 50px;
 }
 .btn1{
   background: #3F3D56;
@@ -236,6 +260,7 @@ footer a{
   margin-top: -40px;
   border-radius: 10px;
 }
+
 
 .btn1:hover {
   color: #3F3D56;
@@ -253,6 +278,12 @@ footer a{
 .btn2:hover {
   color: #3F3D56;
   background: white;
+}
+
+
+
+.last {
+  margin-right: 50px;
 }
 .cardo{
   width: 250px;
