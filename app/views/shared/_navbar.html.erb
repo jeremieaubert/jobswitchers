@@ -1,7 +1,9 @@
 
+<body>
+
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <%= link_to "#", class: "navbar-brand p-2 flex-grow-1 bd-highlight" do %>
-      <%= link_to root_path, class: "navbar-brand p-2 flex-grow-1 bd-highlight" do %>
+
       <%= image_tag "logoGris.png", width: 55, height: 50 %>
       <h1><strong>JobSwitchers</strong></h1>
       <% end %>
@@ -22,7 +24,6 @@
             <%= image_tag "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FC8QsNInXUAAyjZQ.jpg&f=1", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to "Profile", "#", class: "dropdown-item" %>
-              <%= link_to "Dashboard", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
@@ -31,13 +32,16 @@
             <%= link_to "Home", "/", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Sign in", new_test_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
             <%= link_to "Our Story", new_user_session_path, class: "nav-link" %>
           </li>
+          <li class="nav-item">
+            <%= link_to "Create an account", new_user_registration_path, class: "btn btn-primary" %>
+          </li>
+
         <% end %>
-        <% end %>
+
       </ul>
     </div>
   </div>
+  </body>s
+

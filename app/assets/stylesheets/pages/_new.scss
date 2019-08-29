@@ -1,25 +1,26 @@
 .banner {
-  background-image: url("https://images.unsplash.com/photo-1518623001395-125242310d0c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80");
+  background-image: url("https://images.unsplash.com/photo-1508614823792-1f56af914148?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
   background-size: cover;
   background-position: center;
-  opacity: 0.8;
+  
 }
 
 .card {
-  background-color: white;
-}
+  background-color:white;
+ }
+
 .banner h3 {
-font-family: "Optima";
+font-family: "Helvetica";
 color: white;
 text-align:center;
 font-weight: bold;
 padding-top: 30px;
-padding-bottom: 30px;
 }
 
-.accordion{
-background: #3F3D56;
+.text_form {
+  margin-bottom: 30px;
 }
+
 
 .card-body{
 text-align: center;
@@ -28,25 +29,28 @@ text-align: center;
 .card-body p{
 text-align: center;
 font-size: 25px;
+font-weight: bold;
 }
 
 .font {
   font-size: 22px;
-  font-color: black;
+  color: black;
   justify-content:center;
   text-align: center;
 }
 .font a{
   font-size: 22px;
+  color: black;
 }
 .collapse{
   justify-content: center;
   font-size: 20px;
+  color:black;
 }
 
 .card-header{
 justify-content:center;
-  text-align: center;
+text-align: center;
 
 }
 .btn11{
@@ -55,6 +59,10 @@ justify-content:center;
     margin-left: 340px;
     padding: 15px;
     border-radius: 10px;
-
     margin-bottom: 20px;
   }
+
+.btn_persona {
+  background-color: #3f3d56;
+  color: white;
+}
