@@ -55,18 +55,11 @@ h2{
 
 }
 
-.middle-cover .vertical-line{
-    position: absolute;
-    left: 50%;
-    top: -10px;
-    width: 2px;
-    height: 80px;
-    background-color: #51a9ab;
-}
+
 .other-actions .horizontal-line{
     width: 80px;
     height: 2px;
-    background-color: white;
+    background-color: #3F3D56;
     margin-left: 720px;
 
 }
@@ -80,14 +73,14 @@ h2{
     z-index: 0;
     font-weight: 700;
     margin-top: 110px;
-    margin-left: -110px;
+    margin-left: -90px;
 }
 .low .number{
     position: absolute;
     top: -30px;
     line-height: 1;
-    color: white;
-    opacity: 0.3;
+    color: grey;
+    opacity: 0.1;
     font-size: 8em;
     z-index: 0;
     font-weight: 700;
@@ -95,7 +88,7 @@ h2{
     padding-left: 500px;
 }
 .lowo .number{
-  margin-left: -170px;
+  margin-left: -110px;
   margin-top: 90px;
   color: grey;
   opacity: 0.1;
@@ -178,12 +171,27 @@ margin-top: 50px;
   border-color: #3F3D56;
   text-decoration: none;
 }
+.btn24{
+  background: #3F3D56;
+  color: white;
+  margin-left: 200px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+
+}
+
+.btn24:hover {
+  color: #3F3D56;
+  background: white;
+  font-weight: bold;
+  border-color: #3F3D56;
+  text-decoration: none;
+}
 
 
 .card2{
-  background: #D8D9DA;
-  background: -webkit-gradient(linear,left top,left bottom,from(#D8D9DA),to(#fff));
-  background: linear-gradient(180deg,#D8D9DA 0,#fff);
   margin-bottom: 60px;
 
   }
@@ -295,7 +303,7 @@ margin-top: 50px;
   display: flex;
   align-items: flex-end;
   transition: 0.4s ease-out;
-  box-shadow: 0px 7px 10px rgba(black, 0.5);
+
   margin-top: 40px;
 
   &:hover{
@@ -370,5 +378,43 @@ margin-top: 50px;
   width: 110%;
 }
 
+footer{
+  display: flex;
+  justify-content: space-around;
+  max-width: 100%;
+  height: 60px;
+  background: #3F3D56;
+  padding-top: 15px;
+}
+footer a{
+  color: white;
+}
 
+.fab{
+  justify-content: space-around;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  height: 30px;
+  width: 30px;
+
+  filter: brightness(0.1);
+  margin-top: 5px;
+}
+
+.fb{
+  height: 30px;
+  width: 30px;
+  padding-left: 10px;
+}
+.twit{
+height: 30px;
+  width: 30px;
+  padding-left: 10px;
+}
+.inst{
+  height: 30px;
+  width: 30px;
+  padding-left: 10px;
+}
 
