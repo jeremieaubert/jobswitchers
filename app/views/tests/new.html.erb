@@ -1,16 +1,16 @@
 
-<div class="banner pb-5 ">
-  <h3>Complete the test to know your personality & the relevant jobs</h3>
+<div class="banner pb-5">
+  <h3 class="text_form">Complete the test to find out your personality type</h3>
   <%= form_tag tests_path do%>
   <%= hidden_field_tag 'answer_id', @answer.id%>
   <div class="row d-flex justify-content-center">
-    <div class="accordion col-6" id="accordionExample">
+    <div class="accordion col-6" id="accordionExample" style="margin-bottom: 7%;">
       <% @questions.each_with_index do |q, i| %>
       <div class="card">
         <div class="card-header d-flex py-1" id="headingOne">
           <h2 class="font mb-0">
           <a href="" class="bols <%= 'collapsed' unless i.zero? %>" type="" data-toggle="collapse" data-target="#collapse<%= i %>" aria-expanded="<%= i.zero? %>" aria-controls="collapse<%= i %>">
-           Q - <%= i + 1 %>
+           <%#= i + 1 %>
           </a>
           </h2>
 
@@ -27,8 +27,9 @@
         </div>
       </div>
       <% end %>
-    <%= submit_tag 'Submit', class: 'btn11 mt-3' %>
+      <%= submit_tag 'Submit', class: 'btn btn_persona btn-lg btn-block' %>
     </div>
   </div>
   <% end %>
+
 </div>
