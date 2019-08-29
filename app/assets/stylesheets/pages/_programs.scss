@@ -1,11 +1,13 @@
 @import 'https://fonts.googleapis.com/css?family=Do+Hyeon';
-
+.container{
+  margin-bottom: 120px;
+}
 .card-trip {
     overflow: hidden;
-    background: white;
+    background: #FFC107;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     margin: 5px;
-    width: 69%;
+    width: 60%;
     padding-left: 10px;
   }
 
@@ -14,7 +16,6 @@
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     margin: 5px;
-    width: 129%;
     padding: 10px;
     height: 520px;
     margin-top: 30px;
@@ -54,12 +55,7 @@
 
   }
 .card-imag1{
-  margin-right: -320px;
-
-  opacity: 0.8;
   margin-top: -60px;
-  margin-right: -40px;
-
 }
 
 .card-imag4{
@@ -165,17 +161,17 @@
   position: relative;
 }
 .card__collection .cards{
-  margin: 30px;
+  margin: 40px;
 }
 
 .buttons5{
-
   position: absolute;
   margin-left: 750px;
   margin-top: 40px;
   padding: 12px;
   border-radius: 10px;
-
+  top: 244px;
+  left: -142px;
 }
 
 .buttons5:hover {
@@ -186,7 +182,7 @@
 .buttons6{
   background: #3F3D56;
   position: absolute;
-  margin-left: 350px;
+  margin-left: 440px;
   margin-top: 30px;
   margin-bottom: 30px;
   text-decoration: none;
@@ -201,7 +197,9 @@
 
 .infy{
   padding-top: 40px;
-
+  height: 270px;
+  margin: 30px;
+  margin-left: 340px;
 }
 .my-custom-scrollbar {
 position: relative;
@@ -225,11 +223,17 @@ display: block;
 .infy h4{
   text-align: center;
   padding-bottom: 10px;
+  margin-top: -30px;
+  color: #3F3D56;
+}
+.infy h6{
+  color: #3F3D56;
 }
 
 .infy li{
   padding-top: 10px;
   padding-bottom: 10px;
+  color: #3F3D56;
 }
 
 .fab{
@@ -264,6 +268,7 @@ display: block;
     overflow: hidden;
     background-color:white;
     width: 1590px;
+    margin-left: 70px;
 
 
 
@@ -377,9 +382,10 @@ display: block;
     }
 
   .cards--two {
-      position: relative;
-      backface-visibility: hidden;
-
+    height: 270px;
+    width: 270px;
+  top: 15px;
+  left: 10px;
       p {
         position: absolute;
         top: 83%;
