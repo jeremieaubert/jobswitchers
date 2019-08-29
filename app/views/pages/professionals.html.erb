@@ -22,15 +22,16 @@
         </div>
 
         <div class="infy1">
-          <h4><strong>Lucie Leclerq</strong></h4>
-          <p>Write a message to Lucie to know more
-            <br>about the job </p>
+          <h4><strong>Lucie Leclerq</strong> - Production Manager</h4>
+          <p>Write a message to Lucie to know about
+            <br>her avalability for a meeting </p>
         </div>
-          <label class="formy" for="Availability"><strong>Check the availability: </strong></label>
+          <label class="formy" for="Availability"><strong>Choose a date: </strong></label>
           <input class="formy-date" type="date">
-          <label class="formy1" for="Message"><strong>Message: </strong></label>
-          <input class="formy1-mess" type="text" placeholder=" To Lucie">
-          <%= submit_tag 'Send', class: 'btn22' %>
+            <label class="formy1" for="exampleFormControlTextarea1"><strong>Message: </label></strong>
+            <textarea class="form-control formy1-mess" id="exampleFormControlTextarea1" rows="3" placeholder="Write a message to Lucie"></textarea>
+
+          <%= link_to 'Send', professionals_path(flash_notice: "Your message is succesfully sent") , class: 'btn26' %>
         </div>
       </div>
     </div>
@@ -57,15 +58,16 @@
         </div>
 
         <div class="infy1">
-          <h4><strong>Maurice Campion</strong></h4>
-          <p>Write a message to Maurice to know more
-            <br>about the job </p>
+          <h4><strong>Maurice Campion</strong> - Lead Carpenter</h4>
+          <p>Write a message to Maurice to know about
+            <br>her avalability for a meeting </p>
         </div>
-          <label class="formy" for="Availability"><strong>Check the availability: </strong></label>
+          <label class="formy" for="Availability"><strong>Choose a date: </strong></label>
           <input class="formy-date" type="date">
-          <label class="formy1" for="Message"><strong>Message: </strong></label>
-          <input class="formy1-mess" type="text" placeholder=" To Maurice">
-          <%= submit_tag 'Send', class: 'btn22' %>
+          <label class="formy1" for="exampleFormControlTextarea1"><strong>Message: </label></strong>
+            <textarea class="form-control formy1-mess" id="exampleFormControlTextarea1" rows="3" placeholder="Write a message to Maurice"></textarea>
+
+          <%= link_to 'Send', professionals_path(flash_notice: "Your message is succesfully sent") , class: 'btn26' %>
         </div>
       </div>
     </div>
@@ -93,15 +95,15 @@
         </div>
 
         <div class="infy1">
-          <h4><strong>Marie Condamino</strong></h4>
-          <p>Write a message to Marie to know more
-            <br>about the job </p>
+          <h4><strong>Marie Condamino</strong> - Jewelry Designer</h4>
+          <p>Write a message to Marie to know about
+            <br>her avalability for a meeting </p>
         </div>
-          <label class="formy" for="Availability"><strong>Check the availability: </strong></label>
+          <label class="formy" for="Availability"><strong>Choose a date: </strong></label>
           <input class="formy-date" type="date">
-          <label class="formy1" for="Message"><strong>Message: </strong></label>
-          <input class="formy1-mess" type="text" placeholder=" To Marie">
-          <%= submit_tag 'Send', class: 'btn22' %>
+          <label class="formy1" for="exampleFormControlTextarea1"><strong>Message: </label></strong>
+            <textarea class="form-control formy1-mess" id="exampleFormControlTextarea1" rows="3" placeholder="Write a message to Marie"></textarea>
+          <%= link_to 'Send', professionals_path(flash_notice: "Your message is succesfully sent") , class: 'btn26' %>
         </div>
       </div>
     </div>
@@ -128,21 +130,22 @@
         </div>
 
         <div class="infy1">
-          <h4><strong>Charlotte Bonefille</strong></h4>
-          <p>Write a message to Charlotte to know more
-            <br>about the job </p>
+          <h4><strong>Charlotte Bonefille</strong> - Floral Designer</h4>
+          <p>Write a message to Lucie to know about
+            <br>her avalability for a meeting </p>
         </div>
-          <label class="formy" for="Availability"><strong>Check the availability: </strong></label>
+          <label class="formy" for="Availability"><strong>Choose a date: </strong></label>
           <input class="formy-date" type="date">
-          <label class="formy1" for="Message"><strong>Message: </strong></label>
-          <input class="formy1-mess" type="text" placeholder=" To Charlotte">
-          <%= submit_tag 'Send', class: 'btn22' %>
+          <label class="formy1" for="exampleFormControlTextarea1"><strong>Message: </label></strong>
+            <textarea class="form-control formy1-mess" id="exampleFormControlTextarea1" rows="3" placeholder="Write a message to Charlotte"></textarea>
+          <%= link_to 'Send', professionals_path(flash_notice: "Your message is succesfully sent") , class: 'btn26' %>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<% flash.now[:notice] = params[:flash_notice] if params[:flash_notice] %>
 
 
 
