@@ -10,7 +10,7 @@
         </div>
         <div class="details">
           <div class="center">
-            <h1><strong>Lucie Leclerq</strong><br><span>Boots production Manager</span>
+            <h><strong>Lucie Leclerq</strong><br><span>Boots production Manager</span>
               <br><span>Company - <strong>Jones Bootmaker</strong></span><br><span>lucie@jones.com</span></h1>
               <ul>
                 <li><img class="fb" src="https://image.flaticon.com/icons/svg/174/174848.svg" alt=""></li>
@@ -22,16 +22,9 @@
         </div>
 
         <div class="infy1">
-          <h4><strong>Lucie Leclerq</strong> - Production Manager</h4>
-          <p>Write a message to Lucie to know about
-            <br>her avalability for a meeting </p>
+          <h6><strong>Lucie Leclerq</strong> <br> Production Manager</h6>
         </div>
-          <label class="formy" for="Availability"><strong>Choose a date: </strong></label>
-          <input class="formy-date" type="date">
-            <label class="formy1" for="exampleFormControlTextarea1"><strong>Message: </label></strong>
-            <textarea class="form-control formy1-mess" id="exampleFormControlTextarea1" rows="3" placeholder="Write a message to Lucie"></textarea>
-
-          <%= link_to 'Send', professionals_path(flash_notice: "Your message is succesfully sent") , class: 'btn26' %>
+          <button type="button" class="btn26" data-toggle="modal" data-target="#exampleModal" data-whatever="">Send message</button>
         </div>
       </div>
     </div>
@@ -56,18 +49,10 @@
               </ul>
           </div>
         </div>
-
         <div class="infy1">
-          <h4><strong>Maurice Campion</strong> - Lead Carpenter</h4>
-          <p>Write a message to Maurice to know about
-            <br>her avalability for a meeting </p>
+          <h6><strong>Maurice Campion</strong> <br> Lead Carpenter</h6>
         </div>
-          <label class="formy" for="Availability"><strong>Choose a date: </strong></label>
-          <input class="formy-date" type="date">
-          <label class="formy1" for="exampleFormControlTextarea1"><strong>Message: </label></strong>
-            <textarea class="form-control formy1-mess" id="exampleFormControlTextarea1" rows="3" placeholder="Write a message to Maurice"></textarea>
-
-          <%= link_to 'Send', professionals_path(flash_notice: "Your message is succesfully sent") , class: 'btn26' %>
+          <button type="button" class="btn26" data-toggle="modal" data-target="#exampleModal" data-whatever="">Send message</button>
         </div>
       </div>
     </div>
@@ -93,17 +78,10 @@
               </ul>
           </div>
         </div>
-
         <div class="infy1">
-          <h4><strong>Marie Condamino</strong> - Jewelry Designer</h4>
-          <p>Write a message to Marie to know about
-            <br>her avalability for a meeting </p>
+          <h6><strong>Marie Condamino</strong> <br> Jewelry Designer</h6>
         </div>
-          <label class="formy" for="Availability"><strong>Choose a date: </strong></label>
-          <input class="formy-date" type="date">
-          <label class="formy1" for="exampleFormControlTextarea1"><strong>Message: </label></strong>
-            <textarea class="form-control formy1-mess" id="exampleFormControlTextarea1" rows="3" placeholder="Write a message to Marie"></textarea>
-          <%= link_to 'Send', professionals_path(flash_notice: "Your message is succesfully sent") , class: 'btn26' %>
+          <button type="button" class="btn26" data-toggle="modal" data-target="#exampleModal" data-whatever="">Send message</button>
         </div>
       </div>
     </div>
@@ -128,24 +106,50 @@
               </ul>
           </div>
         </div>
+         <div class="infy1">
+          <h6><strong>Charlotte Bonefille</strong> <br> Floral Designer</h6>
+        </div>
 
-        <div class="infy1">
-          <h4><strong>Charlotte Bonefille</strong> - Floral Designer</h4>
-          <p>Write a message to Lucie to know about
-            <br>her avalability for a meeting </p>
+        <button type="button" class="btn26" data-toggle="modal" data-target="#exampleModal" data-whatever="">Send message</button>
         </div>
-          <label class="formy" for="Availability"><strong>Choose a date: </strong></label>
-          <input class="formy-date" type="date">
-          <label class="formy1" for="exampleFormControlTextarea1"><strong>Message: </label></strong>
-            <textarea class="form-control formy1-mess" id="exampleFormControlTextarea1" rows="3" placeholder="Write a message to Charlotte"></textarea>
-          <%= link_to 'Send', professionals_path(flash_notice: "Your message is succesfully sent") , class: 'btn26' %>
-        </div>
+      </div>
+    </div>
+
+
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name" placeholder="Eg: Lucie Leclerq">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text" placeholder="Write a message to Lucie to know more about the job"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn31" data-dismiss="modal">Close</button>
+        <button type="button" class="btn31"><%= link_to 'Send message', professionals_path(flash_alert: "Your message is succesfully sent")%></button>
       </div>
     </div>
   </div>
 </div>
+  </div>
+</div>
 
-<% flash.now[:notice] = params[:flash_notice] if params[:flash_notice] %>
+<% flash.now[:alert] = params[:flash_alert] if params[:flash_alert] %>
 
 
 
