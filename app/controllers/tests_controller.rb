@@ -3,6 +3,8 @@ class TestsController < ApplicationController
     @questions = Question.all
     @answer = Answer.new
     @test = Test.new
+
+    @program = Program.create(user: current_user, test: @test, price_cents: 2000)
   end
 
   def create
@@ -41,6 +43,9 @@ class TestsController < ApplicationController
     end
     @test = Test.create(user: current_user, best_score: value[:val], domain: value[:type].to_s)
 
-    redirect_to programs_path(@test, @program)
+    @order = Order.create!(amount: Program.last.price, state: 'pending', user: current_user)
+
+
+    redirect_to programs_path(@test, @order)
   end
 end

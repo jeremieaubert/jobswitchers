@@ -11,7 +11,6 @@
         <div class="card-imag2">
           <%= image_tag "2.svg", width: 230, height: 290  %>
         </div>
-        <%= form_tag orders_path do %>
       </div>
       <div class="card-triper">
         <h5><strong>You are Creative, Observant and Intuitive</strong></h5>
@@ -77,6 +76,23 @@
         </div>
       </div>
     </div>
+
+            <%= form_tag order_payments_path(@order) do %>
+      <article>
+        <label class="amount">
+          <span>Amount: <%= humanized_money_with_symbol(@order.amount) %></span>
+        </label>
+      </article>
+      <div class="stripe-button">
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+      data-name="My Program"
+      data-email="<%= current_user.email %>"
+      data-description="Program <%= @order.program_sku %>"
+      data-amount="<%= @order.amount_cents %>"
+      data-currency="<%= @order.amount.currency %>"></script>
+    </div>
+      <% end %>
   </div>
 </div>
 <%= hidden_field_tag 'program_id', @program.id %>
