@@ -3,7 +3,7 @@
   h5{
     font-size: 20px;
     text-align:center;
-    padding-top:10px;
+    padding-top:30px;
     padding-bottom: 10px;
   }
 
@@ -23,6 +23,7 @@
     border-radius: 6px;
     border: 2px solid #3F3D56;
     transition: 1s;
+    margin-top: 15px;
   &:hover {
     transition: 0.5s;
     box-shadow: 6px 6px 5px rgba(0,0,0,0.4);
@@ -42,6 +43,7 @@
     font-family: Helvetica;
     margin-top: -10px;
     font-size: 18px;
+    margin-right: 40px;
   }
   .infy1 p{
 
@@ -226,7 +228,7 @@ body {
 .btn26{
   background: #3F3D56;
   color: white;
-  margin-left: 120px;
+  margin-left: 105px;
   font-weight: bold;
   padding: 10px;
   border-radius: 10px;
