@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
     program = Program.find(params[:program_id])
     order = Order.create!(amount: program.price, state: 'pending', user: current_user)
 
-    redirect_to new_order_payment_path(order)
+    redirect_to professionals_path
   end
 
   def show

@@ -27,7 +27,8 @@
         </div>
       </div>
       <% end %>
-      <%= submit_tag 'Submit', class: 'btn btn_persona btn-lg btn-block' %>
+    <%= hidden_field_tag 'program_id', @program.id %>
+    <%= submit_tag 'Submit', class: 'btn11 mt-3' %>
     </div>
   </div>
   <% end %>
